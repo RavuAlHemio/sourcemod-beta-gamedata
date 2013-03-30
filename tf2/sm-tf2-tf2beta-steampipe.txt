@@ -1,0 +1,147 @@
+/**
+ * Save this file as:
+ * tf/addons/sourcemod/gamedata/sm-tf2.games.txt
+ * and make it read-only.
+ * (Windows: right-click -> Properties -> General -> tick Read only)
+ * (Linux/OS X: chmod a-w sm-tf2.games.txt)
+ *
+ * ONCE NON-BETA TF2 RECEIVES THE STEAMPIPE UPDATE, MAKE THE FILE WRITABLE AGAIN!
+ * (Windows: uncheck Read only)
+ * (Linux/OS X: chmod u+w sm-tf2.games.txt)
+ * It (deliberately) overrides SourceMod's gamedata auto-update feature.
+ *
+ * This file has been modified by Ravu al Hemio.
+ * Credit goes to Fyren and psychonic for the gdc tool.
+ */
+
+"Games"
+{
+	"tf"
+	{
+		"Signatures"
+		{
+			"Burn"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x51\x56\x8B\xF1\x8B\x2A\x2A\x2A\x2A\x2A\x8B\x01\x8B\x2A\x2A\x2A\x2A\x2A\xFF\xD2\x84\xC0\x0F\x2A\x2A\x2A\x2A\x2A\x57\x6A\x2A\x8D\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\xC0\x0F\x2A\x2A\x2A\x2A\x2A\x8B\x2A\x2A\x2A\x2A\x2A\xC1\x2A\x2A\x24\x01\x0F\x2A\x2A\x2A\x2A\x2A\x8B"
+				"linux"		"@_ZN15CTFPlayerShared4BurnEP9CTFPlayerP13CTFWeaponBase"
+				"mac"		"@_ZN15CTFPlayerShared4BurnEP9CTFPlayerP13CTFWeaponBase"
+			}
+			"RemoveDisguise"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x2A\x53\x56\x57\x8B\xF1\x6A\x2A\x8D\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\xC0"
+				"linux"		"@_ZN15CTFPlayerShared14RemoveDisguiseEv"
+				"mac"		"@_ZN15CTFPlayerShared14RemoveDisguiseEv"
+			}
+			"Disguise"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x51\x53\x56\x8B\xF1\x8B\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x8B\xD8\x8B"
+				"linux"		"@_ZN15CTFPlayerShared8DisguiseEiiP9CTFPlayerb"
+				"mac"		"@_ZN15CTFPlayerShared8DisguiseEiiP9CTFPlayerb"
+			}
+			"CalcCritical"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTFWeaponBase26CalcIsAttackCriticalHelperEv"
+				"mac"		"@_ZN13CTFWeaponBase26CalcIsAttackCriticalHelperEv"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x2A\x56\x57\x6A\x00\x68\x2A\x2A\x2A\x2A\x68\x2A\x2A\x2A\x2A\x6A\x00\x8B\xF1\xE8\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x8B\xF8\x83\xC4\x2A\x85\xFF\x74\x2A\x8B"
+			}
+			"CalcCriticalMelee"
+			{
+				"library"	"server"
+				"linux"		"@_ZN18CTFWeaponBaseMelee26CalcIsAttackCriticalHelperEv"
+				"mac"		"@_ZN18CTFWeaponBaseMelee26CalcIsAttackCriticalHelperEv"
+				"windows"	"\x55\x8B\xEC\x51\x53\x56\x8B\xF1\xE8\x2A\x2A\x2A\x2A\x8B\xD8\x85\xDB\x74\x2A\x8B\x03"
+			}
+			"CalcCriticalBow"
+			{
+				"library"	"server"
+				"linux"		"@_ZN14CTFCompoundBow26CalcIsAttackCriticalHelperEv"
+				"mac"		"@_ZN14CTFCompoundBow26CalcIsAttackCriticalHelperEv"
+				"windows"	"\xE8\x2A\x2A\x2A\x2A\x85\xC0\x74\x2A\x8D\x88\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\xC0\x74\x2A\xB0"
+			}
+			"Regenerate"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x2A\xF3\x0F\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x8B\xF1\x8B"
+				"linux"		"@_ZN9CTFPlayer10RegenerateEb"
+				"mac"		"@_ZN9CTFPlayer10RegenerateEb"
+			}
+			"AddCondition"
+			{
+				"library"	"server"
+/*				"windows"	"\x55\x8B\xEC\x83\xEC\x2A\x53\x56\x57\x8B\x7D\x2A\x8B\xF1\x83\xFF\x2A\x7C\x2A\x8D\x2A\x2A\x8D\x2A\x2A\x2A\x2A\x2A\x89\x2A\x2A\xEB\x2A\x83\xFF\x2A\x7C" */
+				"windows"	"\x55\x8B\xEC\x83\xEC\x2A\x53\x56\x8B\x75\x2A\x57\x8B\xD9\x83\xFE\x2A\x7C\x2A\x8D\x2A\x2A\x8D\x2A\x2A\x2A\x2A\x2A\x89\x2A\x2A\xEB\x2A\x83\xFE\x2A\x7C"
+				"linux"		"@_ZN15CTFPlayerShared7AddCondE7ETFCondfP11CBaseEntity"
+				"mac"		"@_ZN15CTFPlayerShared7AddCondE7ETFCondfP11CBaseEntity"
+			}
+			"RemoveCondition"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x2A\x53\x56\x8B\x75\x2A\x57\x8B\xF9\x83"
+				"linux"		"@_ZN15CTFPlayerShared10RemoveCondE7ETFCondb"
+				"mac"		"@_ZN15CTFPlayerShared10RemoveCondE7ETFCondb"
+			}
+			"SetPowerplayEnabled"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x80\x2A\x2A\x2A\x56\x57\x8B\xF1\x74\x2A\x80\x2A\x2A\x2A\x2A\x2A\x2A\x74"
+				"linux"		"@_ZN9CTFPlayer19SetPowerplayEnabledEb"
+				"mac"		"@_ZN9CTFPlayer19SetPowerplayEnabledEb"
+			}
+			"SetInWaitingForPlayers"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x56\x8B\xF1\xE8\x2A\x2A\x2A\x2A\x84\xC0\x0F\x85\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A"
+				"linux"		"@_ZN24CTeamplayRoundBasedRules22SetInWaitingForPlayersEb"
+				"mac"		"@_ZN24CTeamplayRoundBasedRules22SetInWaitingForPlayersEb"
+			}
+			"StunPlayer"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x2A\x56\x8B\xF1\x8B\x86\x2A\x2A\x2A\x2A\x40\x3D\x2A\x2A\x2A\x2A\x0F"
+				"linux"		"@_ZN15CTFPlayerShared10StunPlayerEffiP9CTFPlayer"
+				"mac"		"@_ZN15CTFPlayerShared10StunPlayerEffiP9CTFPlayer"
+			}
+			"IsHolidayActive"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x80\x3D\x2A\x2A\x2A\x2A\x2A\x75\x2A\xE8"
+				"linux"		"@_Z20UTIL_IsHolidayActivei"
+				"mac"		"@_Z20UTIL_IsHolidayActivei"
+			}
+			"MakeBleed"
+			{
+				"library" 	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x2A\x57\x8B\xF9\x8B\x8F\x2A\x2A\x2A\x2A\x8B\x01\x8B"
+				"linux"		"@_ZN15CTFPlayerShared9MakeBleedEP9CTFPlayerP13CTFWeaponBasefi"
+				"mac"		"@_ZN15CTFPlayerShared9MakeBleedEP9CTFPlayerP13CTFWeaponBasefi"
+			}
+			"IsPlayerInDuel"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x2A\x8B\x4D\x2A\x33\xC0\x89\x45\x2A\x89\x45"
+				"linux"		"@_Z21DuelMiniGame_IsInDuelP9CTFPlayer"
+				"mac"		"@_Z21DuelMiniGame_IsInDuelP9CTFPlayer"
+			}
+			"CanPlayerTeleport"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x53\x8B\x2A\x2A\x56\x8B\xF1\x85\xDB\x74\x2A\x8B\xCB\xE8"
+				"linux"		"@_ZN17CObjectTeleporter21PlayerCanBeTeleportedEP9CTFPlayer"
+				"mac"		"@_ZN17CObjectTeleporter21PlayerCanBeTeleportedEP9CTFPlayer"
+			}
+		}
+		"Offsets"
+		{
+			"ForceRespawn"
+			{
+				"windows"	"324"
+				"linux"		"325"
+				"mac"		"325"
+			}
+		}
+	}
+}
