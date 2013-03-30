@@ -23,7 +23,7 @@
 			"game"		"tf"
 			"game"		"hl2mp"
 		}
-		
+
 		"Offsets"
 		{
 			"EndTouch"
@@ -67,12 +67,6 @@
 				"windows"	"332"
 				"linux"		"333"
 				"mac"		"333"
-			}
-			"Reload"
-			{
-				"windows"	"274"
-				"linux"		"275"
-				"mac"		"275"
 			}
 			"SetTransmit"
 			{
@@ -160,14 +154,16 @@
 			}
 		}
 	}
-	
+
 	"#default"
 	{
 		"#supported"
 		{
 			"game"		"cstrike"
+			"game"		"dod"
+			"game"		"hl2mp"
 		}
-		
+
 		"Offsets"
 		{
 			"Reload"
@@ -175,6 +171,24 @@
 				"windows"	"268"
 				"linux"		"269"
 				"mac"		"269"
+			}
+		}
+	}
+
+	"#default"
+	{
+		"#supported"
+		{
+			"game"		"tf"
+		}
+
+		"Offsets"
+		{
+			"Reload"
+			{
+				"windows"	"276"
+				"linux"		"277"
+				"mac"		"277"
 			}
 		}
 	}
