@@ -21,7 +21,7 @@
 		{
 			"GiveNamedItem"
 			{
-				"windows"	"399"
+				"windows"	"393"
 				"linux"	"400"
 				"mac"	"400"
 			}
